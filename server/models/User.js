@@ -14,26 +14,10 @@ const User = new schema({
         default:"12345678",
         jsonSchema:{minLength:8}
     },
-    type:{
-        type: String,
-        required:true,
-        enum: ["Admin", "User"]
-    },
-    score:{
-        type: Number
-    },
-    disabled:{
-        type: Boolean,
-        default: false
-    },
-    registeredCourses:{
+    lists:{
         type: [{
-            courseName:{
-                type: String,
-            },
-            completed:{
-                type: Boolean,
-                default: false
+            listName:{
+                type: String
             }
         }]
     }

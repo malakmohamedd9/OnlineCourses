@@ -24,12 +24,7 @@ export default function Login(props) {
             }
             else{
                 localStorage.setItem('auth-token', res.data.data);
-                if(res.data.data2.type === "Admin"){
-                    history.push("/profileAdmin");
-                }
-                else if(res.data.data2.type === "User"){
-                    history.push("/profileUser");
-                }
+                history.push("/profile");
             }
         }).catch(error =>{
             console.log(error)
@@ -42,7 +37,7 @@ export default function Login(props) {
             <div style={{backgroundColor:"white", height:"100%"}}>
             <div className="w3-bar w3-black">
                 <button className="w3-bar-item w3-button w3-padding-large" onClick={() => history.push("/")}>HOME</button>
-                <button className="w3-bar-item w3-button w3-padding-large w3-hide-small" onClick={() => history.push("/")}>SIGN UP</button>
+                <button className="w3-bar-item w3-button w3-padding-large w3-hide-small" onClick={() => history.push("/register")}>SIGN UP</button>
             </div>
             <br/>
             <br/>
@@ -55,7 +50,7 @@ export default function Login(props) {
                 <div className="w3-container">
                     <form onSubmit={handleSubmit}>
                         <p style={{fontSize:"12pt", textAlign:"left"}}><label><FontAwesomeIcon icon={faEnvelope}/> Username</label></p>
-                        <input className="w3-input w3-border" type="text" placeholder="Enter username" required onChange={e =>setUsername(e.target.value)}/>
+                        <input className="w3-input w3-border" type="email" placeholder="Enter username" required onChange={e =>setUsername(e.target.value)}/>
                         <br/>
                         <p style={{fontSize:"12pt", textAlign:"left"}}><label><FontAwesomeIcon icon={faLock}/> Password</label></p>
                         <input className="w3-input w3-border" type="password" placeholder="Enter password" required onChange={e => setPassword(e.target.value)}/>

@@ -1,29 +1,23 @@
-exports.removeCourse = function (someArray , obj){
+exports.removeTask = function (someArray , obj){
     for (var i =0; i < someArray.length; i++){
-        if (someArray[i].courseName === obj) {
+        if (someArray[i].title === obj) {
             someArray.splice(i,1);
             break;
         }
     }
 }
 
-exports.removeCategory = function (someArray , obj){
+exports.removeList = function (someArray , obj){
     for (var i =0; i < someArray.length; i++){
-        if (someArray[i].categoryName === obj) {
+        if (someArray[i].listName === obj) {
             someArray.splice(i,1);
             break;
         }
     }
 }
 
-exports.courseExists = function (arr, courseName) {
+exports.taskExists = function (arr, title) {
     return arr.some(function(el) {
-      return el.courseName === courseName;
-    }); 
-}
-
-exports.categoryExists = function (arr, categoryName) {
-    return arr.some(function(el) {
-      return el.categoryName === categoryName;
+      return el.title === title;
     }); 
 }

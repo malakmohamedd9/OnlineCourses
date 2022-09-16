@@ -6,11 +6,9 @@ import './App.css'
 import Homepage from './components/homepage'
 import Login from './components/login'
 import Register from './components/register'
-import ProfileAdmin from './components/profileAdmin'
-import ProfileUser from './components/profileUser'
+import Profile from './components/profile'
 import ResetPassword from './components/resetPassword'
-import ViewCategories from './components/viewCategories'
-import ViewCourses from './components/viewCourses'
+import CreateList from './components/createList'
 
 function App() {
   
@@ -22,11 +20,9 @@ function App() {
         <Route path ="/" exact component= {Homepage} />
         <Route path ="/login" exact component= {Login} />
         <Route path ="/register" exact component= {Register} />
-        <Route path ="/profileAdmin" exact component= {ProfileAdmin} />
-        <Route path ="/profileUser" exact component= {ProfileUser} />
+        <Route path ="/profile" exact component= {Profile} />
         <Route path ="/resetPassword" exact component= {ResetPassword} />
-        <Route path ="/viewCategories" exact component= {ViewCategories} />
-        <Route path ="/viewCourses" exact component= {ViewCourses} />
+        <Route path ="/createList" exact component= {CreateList} />
 
         </Switch>
       </div>

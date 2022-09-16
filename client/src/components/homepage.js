@@ -17,23 +17,21 @@ export default function Homepage() {
                     <a href="#signup" className="w3-bar-item w3-button w3-padding-large w3-hide-small">SIGN UP</a>
                     <button onClick={() => history.push("/login")} className="w3-bar-item w3-button w3-padding-large w3-hide-small">SIGN IN</button>
                     <a href="#contact" className="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-                    <button onClick={() => history.push("/viewCourses")} className="w3-bar-item w3-button w3-padding-large w3-hide-small">COURSES</button>
-                    <button onClick={() => history.push("/viewCategories")} className="w3-bar-item w3-button w3-padding-large w3-hide-small">CATEGORIES</button>
                 </div>
             </div>
 
             <div className="w3-container w3-content w3-center w3-padding-64" id="homepage">
-                <img src="./onlineCourseLogo.png" className="w3-round" alt="Scratch" style={{width:"50%"}}/>
-                <p className="w3-opacity"><i>Welcome to OnlineCourses!</i></p>
+                <img src="./todo.png" className="w3-round" alt="text" style={{width:"45%"}}/>
+                <p className="w3-opacity"><i>Welcome to Task Management Hero!</i></p>
                 <div className="w3-row w3-padding-32">
                 <div className="w3-third">
-                    <p style={{fontFamily: "cursive"}}>Improve your skills!</p>
+                    <p style={{fontFamily: "cursive"}}>Organize your tasks!</p>
                 </div>
                 <div className="w3-third">
                     <p style={{fontFamily:"cursive"}}>Simple to use!</p>
                 </div>
                 <div className="w3-third">
-                    <p style={{fontFamily: "cursive"}}>Gain course points!</p>
+                    <p style={{fontFamily: "cursive"}}>Ease work load!</p>
                 </div>
                 </div>
             </div>
@@ -46,8 +44,8 @@ export default function Homepage() {
                 <div className="w3-row-padding w3-padding-32" >
                     <div className="w3-margin-bottom" style={{position:"center"}}>
                     <div className="w3-container w3-white w3-margin-bottom"><br/>
-                        <p className="w3-opacity w3-left-align">Enhance your skills.</p>
-                        <p className="w3-left-align">Sign up, register in preferred courses and gain experience points upon completion!</p>
+                        <p className="w3-opacity w3-left-align">Organize your tasks.</p>
+                        <p className="w3-left-align">Sign up, create lists and organize your tasks with Task Management Hero!</p>
                         <button className="w3-button w3-black w3-margin-bottom" onClick={() => history.push("/register")}>Sign Up</button>
                     </div>
                     </div>
@@ -60,7 +58,7 @@ export default function Homepage() {
                 <p className="w3-opacity w3-center  "><i>We would be pleased to receive your feedback!</i></p>
                 <div className="w3-row w3-padding-32">
                 <div className="w3-col m6 w3-large w3-margin-bottom w3-left-align">
-                <FontAwesomeIcon icon={faEnvelope} /> Email: onlinecourses@outlook.com<br/>
+                <FontAwesomeIcon icon={faEnvelope} /> Email: taskmanagementhero@outlook.com<br/>
                 </div>
                 <div className="w3-col m6">
                     <form action="http://localhost:3000/" target="_blank">
