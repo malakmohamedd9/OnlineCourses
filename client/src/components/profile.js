@@ -33,7 +33,7 @@ export default function ProfileUser() {
   }
 
   const handleTasks = async e=>{
-    document.getElementById("task").style.display = true;
+    history.push('/listView');
   }
 
   function helperLists(list) {
@@ -65,8 +65,12 @@ export default function ProfileUser() {
               <div >
               <ul className="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
                 <li className="w3-black">{elem.title}</li>
-                <li>Status: {elem.status}</li>
                 <li>Priority: {elem.priority}</li>
+                <li>Description: {elem.description}</li>
+                <li>Priority: {elem.priority}</li>
+                <li>Status: {elem.status}</li>
+                <li>Start Date: {elem.startDate}</li>
+                <li>End Date: {elem.endDate}</li>
               </ul>
             </div>
             )
