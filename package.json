@@ -67,7 +67,7 @@
   },
   "scripts": {
     "dev": "cd server/ && npm run server",
-    "start": "cd server/ && node index.js",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "postinstall": "npm install --prefix server",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
