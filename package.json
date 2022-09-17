@@ -30,7 +30,7 @@
   "bugs": {
     "url": "http://groups.google.com/group/nodegit"
   },
-  "bundleDependencies": false,
+  "bundleDependencies": [],
   "contributors": [
     {
       "name": "Vincent Giersch",
@@ -38,6 +38,7 @@
     }
   ],
   "dependencies": {
+    "cross-env": "^7.0.3",
     "heroku": "^7.56.0",
     "mime": "1.2.9"
   },
@@ -66,7 +67,7 @@
     "url": "git+ssh://git@github.com/christkv/node-git.git"
   },
   "scripts": {
-    "dev": "cd server/ && npm run server",
+    "dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next dev",
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "postinstall": "npm install --prefix server",
