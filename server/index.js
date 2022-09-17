@@ -34,7 +34,8 @@ const database = require("./config/dev").mongoURI;
 
 mongoose.connect(database, connectionParams).then(()=>{
     console.log("Connected to mongoDB successfully");
-}).catch(()=>{
+}).catch((err)=>{
+    console.log(err.message)
     console.log("Connection failed");
 });
 
